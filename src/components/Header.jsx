@@ -6,7 +6,7 @@ export default function Header(props)
 
     return(
         <header>
-            <h1 className="text-gradient">Você tem {todosLength} {isTasksPlural ? 'tarefas em aberto' : 'tarefa em aberto'}.</h1>
+            <h1 className="text-gradient">Você tem {todosLength} {isTasksPlural ? 'tarefas no total' : 'tarefa no total'}.</h1>
         </header>
     );
 }

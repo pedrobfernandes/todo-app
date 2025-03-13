@@ -1,16 +1,16 @@
 export default function Tabs(props)
 {
     const {todos, selectedTab, setSelectedTab} = props;
-    const tabs = ['All', 'Open', 'Completed'];
+    const tabs = ['Todas', 'Abertas', 'Completadas'];
 
     const todoCounts = todos.reduce((accumulator, todo) =>
     {
-        accumulator.All++;
-        todo.complete ? accumulator.Completed++ : accumulator.Open++;
+        accumulator.Todas++;
+        todo.complete ? accumulator.Completadas++ : accumulator.Abertas++;
 
         return(accumulator);
     },
-        {All: 0, Open: 0, Completed: 0}
+        {Todas: 0, Abertas: 0, Completadas: 0}
     );
 
     return(
@@ -21,7 +21,7 @@ export default function Tabs(props)
                     <button className={"tab-button " +
                         (tab === selectedTab ? ' tab-selected' : ' ')}
                         type="button" key={tabIndex} onClick={() => setSelectedTab(tab)}
-                        aria-label={`Click to see ${selectedTab.toLowerCase()} tasks`}
+                        aria-label={`Clique para vêr ${tab === 'Todas' ? ' todas as tarefas' :  'as tarefas ' + tab.toLowerCase()}`}
                     >
                         <p>{tab} <span>({todoCounts[tab]})</span></p>
                     </button>

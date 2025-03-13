@@ -10,11 +10,11 @@ export default function TodoCard(props)
             <div className="todo-buttons">
                 <button type="button" disabled={todo.complete}
                     onClick={ () => {handleCompleteTodo(todoIndex)}
-                } aria-label="Click to mark task as complete">
-                    <p>Done</p>
+                } aria-label="Clique para marcar tarefa como concluída">
+                    <p>Completa</p>
                 </button>
-                <button type="button" onClick={ () => handleDeleteTodo(todoIndex) } aria-label="Click to delete task">
-                    <p>Delete</p>
+                <button type="button" onClick={ () => handleDeleteTodo(todoIndex) } aria-label="Clique para deletar tarefa">
+                    <p>Deletar</p>
                 </button>
             </div>
         </div>

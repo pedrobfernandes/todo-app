@@ -7,9 +7,9 @@ import TodoInput from './components/TodoInput';
 export default function App()
 {
     const [todos, setTodos] = useState([
-        {input: 'Hello! Add your first todo!', complete: true}
+        {input: 'Olá! Adicione a sua primeira tarefa!', complete: true}
     ]);
-    const [selectedTab, setSelectedTab] = useState('All');
+    const [selectedTab, setSelectedTab] = useState('Todas');
 
     function handleAddTodo(newTodo)
     {

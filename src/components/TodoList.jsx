@@ -4,9 +4,9 @@ export default function TodoList(props)
 {
     const {todos, selectedTab, handleDeleteTodo, handleCompleteTodo} = props;
 
-    const filterTodoList = selectedTab === 'All' ?
+    const filterTodoList = selectedTab === 'Todas' ?
         todos :
-        selectedTab === 'Completed' ?
+        selectedTab === 'Completadas' ?
             todos.filter(value => value.complete) :
             todos.filter(value => !value.complete);
 
